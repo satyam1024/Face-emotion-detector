@@ -4,7 +4,6 @@ from keras.models import model_from_json
 import numpy as np
 from tensorflow.keras.models import load_model
 from keras import backend as K
-
 import pathlib
 
 st.set_page_config(
@@ -58,11 +57,9 @@ def run_app():
                 st.warning("Unable to read from the webcam. Stopping...")
                 break
 
-          
             img = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
             faces = face_cascade.detectMultiScale(img, 1.3, 5)
 
-           
             for (x, y, w, h) in faces:
                 face = img[y:y + h, x:x + w]
                 face = cv2.resize(face, (48, 48))
@@ -72,15 +69,14 @@ def run_app():
                 cv2.rectangle(im, (x, y), (x + w, y + h), (255, 0, 0), 2)
                 cv2.putText(im, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
-     
             im_rgb = cv2.cvtColor(im, cv2.COLOR_BGR2RGB)
             stframe.image(im_rgb, channels="RGB")
+
     finally:
-      
         if cap:
             cap.release()
             st.session_state.camera = None
-        clear_session() 
+        clear_session()
 
 if "run" not in st.session_state:
     st.session_state.run = False
@@ -92,26 +88,23 @@ if "camera" not in st.session_state:
 
 st.markdown('<h1 class="blue_gradient">Emotion Detector</h1>', unsafe_allow_html=True)
 
-
-    
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("Start Camera",key="green"):
+    if st.button("Start Camera", key="green"):
         st.session_state.start_disabled = True
         st.session_state.run = True
         with st.spinner("Loading camera..."):
             st.session_state.camera = cv2.VideoCapture(0)
-        
 
 with col2:
-    if st.button("Stop Camera",key="red"):
+    if st.button("Stop Camera", key="red"):
         st.session_state.run = False
         st.session_state.start_disabled = False
         if st.session_state.camera:
             st.session_state.camera.release()
             st.session_state.camera = None
-        clear_session()  
+        clear_session()
 
 if not st.session_state.run:
     st.markdown(
@@ -121,6 +114,5 @@ if not st.session_state.run:
             Camera is off
         </div>
         """, unsafe_allow_html=True)
-
 else:
     run_app()

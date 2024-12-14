@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2 {
+    color: #1e2a47;
+    text-align: center;
+}
+
+.stMainBlockContainer {
+    width: 100vw;
+}
+
+.st-emotion-cache-13ln4jf {
+    max-width: 100vw;
+}
+
+.st-emotion-cache-1rsyhoq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.st-emotion-cache-ocqkz7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+}
+
+.st-emotion-cache-keje6w {
+    width: auto;
+}
+
+.blue_gradient {
+    font-weight: bold;
+    background: linear-gradient(to right, #f59e0b, #f97316, #fbbf24);
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+.st {
+    width: 15vw;
+    margin: 0;
+}
+
+.stImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.st-key-green button {
+
+    background-color: #ffffff;
+    color: #218838;
+    font-weight: bold;
+    font-size: 32px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 1px solid black;
+}
+
+.st-key-green button p {
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.st-key-red button p {
+
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.st-key-red button {
+
+
+    background-color: #ffffff;
+    color: #f11111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.st-key-green button:hover {
+    background-color: #28a745;
+    color: white;
+
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
+.st-key-red button:hover {
+    background-color: #f11111;
+    color: white;
+
+    transform: scale(1.1);
+    border: 1px solid black;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.camera-placeholder {
+    font-size: 50px;
+    color: #888;
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 50vw;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+
+.stColumn {
+    display: flex;
+    max-width: 20vw;
+    justify-content: space-evenly;
+}
+
+.camera-feed {
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: white;
+}
